@@ -1,5 +1,5 @@
 {
-    "collection": "employees",
+    "collection": "people",
     "database": "db1",
     "roles": [
         {
