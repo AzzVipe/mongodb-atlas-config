@@ -1,0 +1,207 @@
+{
+    "collection": "employees",
+    "database": "db1",
+    "roles": [
+        {
+            "name": "superuser",
+            "apply_when": {
+                "%%true": {
+                    "%function": {
+                        "name": "is_admin"
+                    }
+                }
+            },
+            "document_filters": {
+                "write": true,
+                "read": true
+            },
+            "read": true,
+            "write": true,
+            "insert": true,
+            "delete": true,
+            "search": true
+        },
+        {
+            "name": "PMO",
+            "apply_when": {
+                "%%true": {
+                    "%function": {
+                        "name": "is_pmo"
+                    }
+                }
+            },
+            "document_filters": {
+                "write": {},
+                "read": {}
+            },
+            "fields": {
+                "lead_of_projects": {
+                    "write": true,
+                    "read": true
+                },
+                "owner_of_projects": {
+                    "write": true,
+                    "read": true
+                },
+                "projects": {
+                    "write": true,
+                    "read": true
+                }
+            },
+            "insert": false,
+            "search": true,
+            "additional_fields": {
+                "write": false,
+                "read": true
+            }
+        },
+        {
+            "name": "it",
+            "apply_when": {
+                "%%true": {
+                    "%function": {
+                        "name": "is_it"
+                    }
+                }
+            },
+            "document_filters": {
+                "write": {},
+                "read": {}
+            },
+            "fields": {
+                "it": {
+                    "write": true,
+                    "read": true
+                },
+                "lead_of_projects": {
+                    "write": true,
+                    "read": true
+                },
+                "owner_of_projects": {
+                    "write": true,
+                    "read": true
+                },
+                "projects": {
+                    "write": true,
+                    "read": true
+                },
+                "update_logs": {
+                    "write": true,
+                    "read": true
+                }
+            },
+            "insert": false,
+            "delete": false,
+            "search": true,
+            "additional_fields": {
+                "write": false,
+                "read": true
+            }
+        },
+        {
+            "name": "operations",
+            "apply_when": {
+                "%%true": {
+                    "%function": {
+                        "name": "is_operations"
+                    }
+                }
+            },
+            "document_filters": {
+                "write": {},
+                "read": {}
+            },
+            "fields": {
+                "lead_of_projects": {
+                    "write": true,
+                    "read": true
+                },
+                "operations": {
+                    "write": true,
+                    "read": true
+                },
+                "owner_of_projects": {
+                    "write": true,
+                    "read": true
+                },
+                "projects": {
+                    "write": true,
+                    "read": true
+                },
+                "update_logs": {
+                    "write": true,
+                    "read": true
+                }
+            },
+            "insert": false,
+            "delete": false,
+            "search": true,
+            "additional_fields": {
+                "write": false,
+                "read": true
+            }
+        },
+        {
+            "name": "user",
+            "apply_when": {
+                "%%true": {
+                    "%function": {
+                        "name": "is_user"
+                    }
+                }
+            },
+            "document_filters": {
+                "write": false,
+                "read": true
+            },
+            "fields": {
+                "documents": {
+                    "write": false,
+                    "read": false
+                },
+                "general_details": {
+                    "write": false,
+                    "read": false
+                },
+                "it": {
+                    "write": false,
+                    "read": false
+                },
+                "lead_of_projects": {
+                    "write": false,
+                    "read": true
+                },
+                "operations": {
+                    "write": false,
+                    "read": false
+                },
+                "owner_of_projects": {
+                    "write": false,
+                    "read": true
+                },
+                "projects": {
+                    "write": false,
+                    "read": true
+                },
+                "update_logs": {
+                    "write": false,
+                    "read": false
+                }
+            },
+            "read": true,
+            "write": false,
+            "insert": false,
+            "delete": false,
+            "search": true
+        },
+        {
+            "name": "deny",
+            "apply_when": {},
+            "read": false,
+            "write": false,
+            "insert": false,
+            "delete": false,
+            "search": false
+        }
+    ]
+}

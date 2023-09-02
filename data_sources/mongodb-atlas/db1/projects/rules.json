@@ -1,0 +1,170 @@
+{
+    "collection": "projects",
+    "database": "db1",
+    "roles": [
+        {
+            "name": "superuser",
+            "apply_when": {
+                "%%true": {
+                    "%function": {
+                        "name": "is_admin"
+                    }
+                }
+            },
+            "document_filters": {
+                "write": {},
+                "read": {}
+            },
+            "read": true,
+            "write": true,
+            "insert": true,
+            "delete": true,
+            "search": true
+        },
+        {
+            "name": "PMO",
+            "apply_when": {
+                "%%true": {
+                    "%function": {
+                        "name": "is_pmo"
+                    }
+                }
+            },
+            "document_filters": {
+                "write": {},
+                "read": {}
+            },
+            "fields": {
+                "people": {
+                    "write": true,
+                    "read": true
+                },
+                "source_id_m2_10k": {
+                    "write": true,
+                    "read": true
+                },
+                "source_id_p1_10k": {
+                    "write": true,
+                    "read": true
+                },
+                "update_logs": {
+                    "write": true,
+                    "read": true
+                }
+            },
+            "insert": false,
+            "delete": false,
+            "search": true,
+            "additional_fields": {
+                "write": false,
+                "read": true
+            }
+        },
+        {
+            "name": "it",
+            "apply_when": {
+                "%%true": {
+                    "%function": {
+                        "name": "is_it"
+                    }
+                }
+            },
+            "document_filters": {
+                "write": {},
+                "read": {}
+            },
+            "fields": {
+                "people": {
+                    "write": true,
+                    "read": true
+                },
+                "update_logs": {
+                    "write": true,
+                    "read": true
+                }
+            },
+            "insert": false,
+            "delete": false,
+            "search": true,
+            "additional_fields": {
+                "write": false,
+                "read": true
+            }
+        },
+        {
+            "name": "operations",
+            "apply_when": {
+                "%%true": {
+                    "%function": {
+                        "name": "is_operations"
+                    }
+                }
+            },
+            "document_filters": {
+                "write": {},
+                "read": {}
+            },
+            "fields": {
+                "people": {
+                    "write": true,
+                    "read": true
+                },
+                "update_logs": {
+                    "write": true,
+                    "read": true
+                }
+            },
+            "insert": false,
+            "delete": false,
+            "search": true,
+            "additional_fields": {
+                "write": false,
+                "read": true
+            }
+        },
+        {
+            "name": "User",
+            "apply_when": {
+                "%%true": {
+                    "%function": {
+                        "name": "is_user"
+                    }
+                }
+            },
+            "document_filters": {
+                "write": {},
+                "read": {}
+            },
+            "fields": {
+                "people": {
+                    "write": false,
+                    "read": true
+                },
+                "update_logs": {
+                    "write": true,
+                    "read": true
+                }
+            },
+            "insert": false,
+            "delete": false,
+            "search": true,
+            "additional_fields": {
+                "write": false,
+                "read": true
+            }
+        },
+        {
+            "name": "denyAllAccess",
+            "apply_when": {},
+            "document_filters": {
+                "write": false,
+                "read": false
+            },
+            "read": false,
+            "write": false,
+            "insert": false,
+            "delete": false,
+            "search": false
+        }
+    ]
+}

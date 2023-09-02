@@ -1,0 +1,40 @@
+[
+    {
+        "name": "add_field",
+        "private": false,
+        "disable_arg_logs": true
+    },
+    {
+        "name": "addUserToDatabase",
+        "private": true
+    },
+    {
+        "name": "is_pmo",
+        "private": false,
+        "disable_arg_logs": true
+    },
+    {
+        "name": "is_admin",
+        "private": false,
+        "disable_arg_logs": true
+    },
+    {
+        "name": "is_user",
+        "private": false,
+        "disable_arg_logs": true
+    },
+    {
+        "name": "is_it",
+        "private": false,
+        "disable_arg_logs": true
+    },
+    {
+        "name": "is_operations",
+        "private": false,
+        "disable_arg_logs": true
+    },
+    {
+        "name": "authFunc",
+        "private": true
+    }
+]
