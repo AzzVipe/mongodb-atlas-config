@@ -7,10 +7,8 @@ exports = function(authEvent) {
   .then((temp) => {
     if(temp == null) {
       collection.insertOne(
-        { user_id: user.id, data: data, created_at: new Date(), external_id: externalId }
+        { user_id: user.id, data: data, created_at: new Date() }
       );
-    } else if(!temp.hasOwnProperty("picture")) {
-      collection.updateOne({ user_id: user.id }, {$set: { data: data, external_id: externalId }})
     }
   })
 };
