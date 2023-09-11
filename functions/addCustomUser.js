@@ -3,12 +3,6 @@ exports = function(authEvent) {
   const collection = context.services.get("mongodb-atlas").db("db1").collection("users");
   const data = user.data;
   
-  const customFunctionIdentity = user.identities.find((id) => {
-    return id.provider_type === "custom-function";
-  });
-  
-  const externalId = customFunctionIdentity.id;
-  
   collection.findOne({ "user_id" : user.id })
   .then((temp) => {
     if(temp == null) {
