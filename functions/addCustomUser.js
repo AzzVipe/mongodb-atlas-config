@@ -16,7 +16,7 @@ exports = function(authEvent) {
         { user_id: user.id, data: data, created_at: new Date(), external_id: externalId }
       );
     } else if(!temp.hasOwnProperty("picture")) {
-      collection.updateOne({ userID: user.id }, {$set: { data: data, external_id: externalId }})
+      collection.updateOne({ user_id: user.id }, {$set: { data: data, external_id: externalId }})
     }
   })
 };
