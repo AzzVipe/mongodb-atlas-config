@@ -1,0 +1,19 @@
+{
+    "id": "64fee43c42109d998c372e46",
+    "name": "Custom_function_auth",
+    "type": "AUTHENTICATION",
+    "config": {
+        "operation_type": "CREATE",
+        "providers": [
+            "custom-function"
+        ]
+    },
+    "disabled": false,
+    "event_processors": {
+        "FUNCTION": {
+            "config": {
+                "function_name": "addCustomUser"
+            }
+        }
+    }
+}
