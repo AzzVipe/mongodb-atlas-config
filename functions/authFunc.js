@@ -12,6 +12,7 @@ exports = async function({email,deviceId}){
   }
   return{
     id:user._id.toString(),
-    name:user.name
+    name:user.name,
+    email: email
   }
 };
