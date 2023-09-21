@@ -39,6 +39,10 @@
                     "write": true,
                     "read": true
                 },
+                "people_ids": {
+                    "write": true,
+                    "read": true
+                },
                 "source_id_m2_10k": {
                     "write": true,
                     "read": true
