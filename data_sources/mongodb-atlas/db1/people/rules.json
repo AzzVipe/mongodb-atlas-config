@@ -46,6 +46,10 @@
                 "projects": {
                     "write": true,
                     "read": true
+                },
+                "update_logs": {
+                    "write": true,
+                    "read": true
                 }
             },
             "insert": false,
