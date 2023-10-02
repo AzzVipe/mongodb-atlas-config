@@ -3,19 +3,6 @@
     "database": "db1",
     "roles": [
         {
-            "name": "readAndWriteAll",
-            "apply_when": {},
-            "document_filters": {
-                "write": true,
-                "read": true
-            },
-            "read": true,
-            "write": true,
-            "insert": true,
-            "delete": true,
-            "search": true
-        },
-        {
             "name": "admin",
             "apply_when": {
                 "apply_when": {
