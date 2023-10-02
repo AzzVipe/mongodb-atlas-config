@@ -39,6 +39,10 @@
                     "write": true,
                     "read": true
                 },
+                "notes": {
+                    "write": true,
+                    "read": true
+                },
                 "owner_of_projects": {
                     "write": true,
                     "read": true
@@ -77,18 +81,6 @@
                     "write": true,
                     "read": true
                 },
-                "lead_of_projects": {
-                    "write": true,
-                    "read": true
-                },
-                "owner_of_projects": {
-                    "write": true,
-                    "read": true
-                },
-                "projects": {
-                    "write": true,
-                    "read": true
-                },
                 "update_logs": {
                     "write": true,
                     "read": true
@@ -116,19 +108,7 @@
                 "read": {}
             },
             "fields": {
-                "lead_of_projects": {
-                    "write": true,
-                    "read": true
-                },
                 "operations": {
-                    "write": true,
-                    "read": true
-                },
-                "owner_of_projects": {
-                    "write": true,
-                    "read": true
-                },
-                "projects": {
                     "write": true,
                     "read": true
                 },
@@ -171,17 +151,9 @@
                     "write": false,
                     "read": false
                 },
-                "lead_of_projects": {
-                    "write": false,
-                    "read": true
-                },
                 "operations": {
                     "write": false,
                     "read": false
-                },
-                "owner_of_projects": {
-                    "write": false,
-                    "read": true
                 },
                 "projects": {
                     "write": false,
