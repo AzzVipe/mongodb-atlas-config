@@ -1,6 +1,21 @@
 {
     "collection": "people",
     "database": "db1",
+    "filters": [
+        {
+            "name": "employee",
+            "query": {
+                "employment_type": "Contractor"
+            },
+            "apply_when": {
+                "%%true": {
+                    "%function": {
+                        "name": "is_pmo"
+                    }
+                }
+            }
+        }
+    ],
     "roles": [
         {
             "name": "superuser",
