@@ -1,6 +1,21 @@
 {
     "collection": "saveView",
     "database": "db1",
+    "filters": [
+        {
+            "name": "notAdmin",
+            "query": {
+                "user_id": "%%user.id"
+            },
+            "apply_when": {
+                "%%false": {
+                    "%function": {
+                        "name": "is_admin"
+                    }
+                }
+            }
+        }
+    ],
     "roles": [
         {
             "name": "readAndWriteAll",
