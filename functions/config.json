@@ -41,5 +41,10 @@
     {
         "name": "addCustomUser",
         "private": true
+    },
+    {
+        "name": "is_pmo2",
+        "private": false,
+        "disable_arg_logs": true
     }
 ]
