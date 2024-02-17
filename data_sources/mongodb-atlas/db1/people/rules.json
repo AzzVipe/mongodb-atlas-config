@@ -14,6 +14,19 @@
                     }
                 }
             }
+        },
+        {
+            "name": "pmo2",
+            "query": {
+                "employment_type": "Contractor"
+            },
+            "apply_when": {
+                "%%true": {
+                    "%function": {
+                        "name": "is_pmo2"
+                    }
+                }
+            }
         }
     ],
     "roles": [
@@ -35,23 +48,6 @@
             "insert": true,
             "delete": true,
             "search": true
-        },
-        {
-            "name": "PMO2",
-            "apply_when": {
-                "%%true": {
-                    "%function": {
-                        "name": "is_pmo2"
-                    }
-                }
-            },
-            "insert": true,
-            "delete": false,
-            "search": true,
-            "additional_fields": {
-                "write": true,
-                "read": true
-            }
         },
         {
             "name": "PMO",
@@ -94,6 +90,25 @@
                 "write": false,
                 "read": true
             }
+        },
+        {
+            "name": "PMO2",
+            "apply_when": {
+                "%%true": {
+                    "%function": {
+                        "name": "is_pmo2"
+                    }
+                }
+            },
+            "document_filters": {
+                "write": true,
+                "read": true
+            },
+            "read": true,
+            "write": true,
+            "insert": true,
+            "delete": false,
+            "search": true
         },
         {
             "name": "it",
