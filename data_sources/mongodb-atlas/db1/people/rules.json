@@ -37,6 +37,23 @@
             "search": true
         },
         {
+            "name": "PMO2",
+            "apply_when": {
+                "%%true": {
+                    "%function": {
+                        "name": "is_pmo2"
+                    }
+                }
+            },
+            "insert": true,
+            "delete": false,
+            "search": true,
+            "additional_fields": {
+                "write": true,
+                "read": true
+            }
+        },
+        {
             "name": "PMO",
             "apply_when": {
                 "%%true": {
