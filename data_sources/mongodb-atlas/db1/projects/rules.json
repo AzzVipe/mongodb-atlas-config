@@ -69,6 +69,53 @@
             }
         },
         {
+            "name": "PMO2",
+            "apply_when": {
+                "%%true": {
+                    "%function": {
+                        "name": "is_pmo2"
+                    }
+                }
+            },
+            "document_filters": {
+                "write": {},
+                "read": {}
+            },
+            "fields": {
+                "notes": {
+                    "write": true,
+                    "read": true
+                },
+                "people": {
+                    "write": true,
+                    "read": true
+                },
+                "people_ids": {
+                    "write": true,
+                    "read": true
+                },
+                "source_id_m2_10k": {
+                    "write": true,
+                    "read": true
+                },
+                "source_id_p1_10k": {
+                    "write": true,
+                    "read": true
+                },
+                "update_logs": {
+                    "write": true,
+                    "read": true
+                }
+            },
+            "insert": false,
+            "delete": false,
+            "search": true,
+            "additional_fields": {
+                "write": false,
+                "read": true
+            }
+        },
+        {
             "name": "it",
             "apply_when": {
                 "%%true": {
